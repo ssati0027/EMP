@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style type="text/css">
+@charset "ISO-8859-1";
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+     @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'poppins',sans-serif;
+    }
+    body{
+        min-height: 100vh;
+        background: #150019
+    }
+    .navigation{
+        position: fixed;
+        width: 60px;
+        height: 100%;
+        background: #3e0748;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+    .navigation:hover,
+    .navigation.active{
+        width:300px;
+    }
+    .navigation ul{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .navigation ul li{
+        position: relative;
+        width: 100%;
+        list-style: none;
+    }
+    .navigation ul li a{
+        position: relative;
+        display: block;
+        width: 100%;
+        display: flex;
+        text-decoration: none;
+        color: #fff;
+    }
+    .navigation ul li a:hover{
+        background: #ea1d63;
+    }
+    
+    .navigation ul li a .icon{
+        position: relative;
+        display: block;
+        min-width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+    }
+    .navigation ul li a .icon .fa{
+        font-size: 20px;
+    }
+    .navigation ul li a.title{
+        position: relative;
+        display:  block;
+        padding: 0 10px;
+        height: 60px;
+        line-height: 60px;
+        text-align: start;
+        white-space: nowrap;
+    }
+    .navigation ul li a .title{
+        position: relative;
+        display: block;
+        padding: 0 10px;
+        height: 60px;
+        line-height: 60px;
+        text-align: start;
+        white-space: nowrap;
+    }
+
+ .toggle{
+     position: absolute;
+     top: 0;
+     right: 0;
+     width: 60px;
+     height: 60px;
+     background: #330748;
+     cursor: pointer;
+     position: fixed;
+ }
+ .toggle.active{
+     background: #ea1d63;
+     
+ }
+ .toggle::before{
+     content: '\f0c9';
+     font-family: fontAwesome;
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     line-height: 60px;
+     text-align: center;
+     font-size: 20px;
+     color: #fff;
+ }
+ .toggle.active:before{
+     content: '\f00d';
+     font-family: fontAwesome;
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     line-height: 60px;
+     text-align: center;
+     font-size: 20px;
+     color: #fff;
+ }
+
+ .registr{
+    margin-left: 60px;
+    color: white;
+    line-height: 0;
+    
+ }
+ .frm input{
+    padding: 5px 20px;
+    text-align: center;
+    display: inline-block;
+ }
+ .frm textarea{
+    padding: 5px 10px;
+    text-align: center;
+    display: inline-block;
+ }
+ .title1{
+ margin:15px;
+ display:inline-flex;
+ }
+
+ .header{
+   text-align: center;
+   padding: 40px 0px;
+ }
+ .sub,.sub1{
+   padding: 15px;
+  padding-left: 0px;
+ }
+
+div h6{
+    position: relative;
+    bottom: 10px;
+    padding: 0;
+    margin: 0;
+    display:block ;
+}
+.btn button{
+    margin: 5px 25px;
+    padding:  5px 10px;
+    background-color:rgb(250, 37, 144);
+    outline: none;
+    border:none;
+    box-shadow: 3px 3px  10px rgb(250, 37, 144);
+    cursor: pointer;
+}
+
+.table{
+   
+   color:white;
+   margin-left: 60px;
+   border-collapse: collapse;
+   }
+  .table table td,th,tr{
+      padding: 10px 30px;
+      border: 1px solid white;
+      border-collapse: collapse;
+  }
+  
+  @media (max-width:767px){
+     .navigation{
+         left: -60px;
+     }
+     .navigation.active{
+         left: 0;
+         width: 100%;
+       
+     }
+     .registr{
+       margin-left: 30px;
+     }
+ }
+
+</style>
+</head>
+<body>
+   
+      <div class="navigation">
+        <form action="update" method="post">
+        <ul>
+            <li><a href="./home.html"> <span class="icon"><i
+                        class="fa fa-home fa-fw" aria-hidden="true"></i></span> <span
+                    class="title">Home</span>
+            </a></li>
+            <li><a href="./showemp.html"> <span class="icon"><i
+                        class="fa fa-users" aria-hidden="true"></i></span> <span class="title">All Employee</span>
+            </a></li>
+            <li><a href="./addemp.html"> <span class="icon"><i
+                        class="fa fa-user-plus" aria-hidden="true"></i></span> <span
+                    class="title">Add New Employee</span>
+            </a></li>
+            <li><a href="./showemp.html"> <span class="icon"><i
+                        class="fa fa-pencil-square" aria-hidden="true"></i></span> <span
+                    class="title">Edit Employee Details</span>
+            </a></li>
+            <li><a href="./showemp.html"> <span class="icon"><i
+                        class="fa fa-user-times" aria-hidden="true"></i></span> <span
+                    class="title">Delete Employee Details</span>
+            </a></li>
+            <li><a href="./login.html"> <span class="icon"><i
+                        class="fa fa-sign-out" aria-hidden="true"></i></span> <span class="title">Logout</span>
+            </a></li>
+        </ul>
+        </form>
+    </div>
+     
+
+        <div class="table">
+            <table style="border-collapse: collapse;">
+                    <caption><h2>List of Employees</h2></caption>
+                    <tr>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Gender</th>
+                        <th>Age</th>
+                        <th>Date Of Birth</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th>Permanent Address</th>
+                        <th>Temporary Address</th>
+                        <th colspan="2">Action</th>
+                    </tr>
+                    <c:forEach var="emp" items="${list}">
+                        <tr>
+                            <td><c:out value="${emp.id}" /></td>
+                            <td><c:out value="${emp.firstname}" /></td>
+                            <td><c:out value="${emp.lastname}" /></td>
+                            <td><c:out value="${emp.gender}" /></td>
+                            <td><c:out value="${emp.age}" /></td>
+                            <td><c:out value="${emp.dob}" /></td>
+                            <td><c:out value="${emp.email}" /></td>
+                            <td><c:out value="${emp.mobile}" /></td>
+                            <td><c:out value="${emp.paddress}" /></td>
+                            <td><c:out value="${emp.taddress}" /></td>
+                            <td><a href="editform.jsp?id=${u.getId()}" class="a">Edit</a></td>  
+                            <td><a href="deleteuser.jsp?id=${u.getId()}" class="a">Delete</a></td>
+                        </tr>
+                    </c:forEach>
+                </table>
+            </div>
+       
+    <div class="toggle" onclick="toggleMenu()"></div>
+    <script src="https://kit.fontawesome.com/79207d64c9.js"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        function toggleMenu() {
+            let navigation = document.querySelector('.navigation');
+            let toggle = document.querySelector('.toggle');
+            navigation.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
